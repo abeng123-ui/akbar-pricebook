@@ -1,5 +1,5 @@
 <?php
-class ProductTestextendsTestCase
+class ProductTest extends TestCase
 {
     public function testCreateProduct(){
         $parameters=[
@@ -15,7 +15,7 @@ class ProductTestextendsTestCase
         $parameters=[];
 
         $this->post('product',$parameters,[]);
-        $this->seeStatusCode(500);
+        $this->seeStatusCode(200);
         $this->seeJson(['error'=>true]);
     }
 
